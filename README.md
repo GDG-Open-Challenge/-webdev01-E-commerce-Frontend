@@ -1,6 +1,6 @@
 # 🛒 NovaBuy — E-Commerce Frontend Challenge
 
-A fully functional multi-page e-commerce storefront built with **HTML, CSS, and vanilla JavaScript**. This project is designed as a **debugging challenge** — it contains **15 intentional bugs** hidden throughout the codebase for you to find and fix.
+A fully functional multi-page e-commerce storefront built with **HTML, CSS, and vanilla JavaScript**. This project is designed as a **debugging challenge** — it contains **20 intentional bugs** hidden throughout the codebase for you to find and fix.
 
 ---
 
@@ -80,7 +80,7 @@ web-dev-challenge-1/
 
 ## 🐛 The Bug Challenge
 
-This project contains **15 intentional bugs** across the HTML, CSS, and JavaScript files. The bugs cover a range of categories:
+This project contains **20 intentional bugs** across the HTML, CSS, and JavaScript files. The bugs cover a range of categories:
 
 - 🧮 **Calculation errors** — Cart totals that don't add up correctly
 - 🔄 **State management issues** — Items not updating or persisting properly
@@ -110,6 +110,16 @@ This project contains **15 intentional bugs** across the HTML, CSS, and JavaScri
 - Look at the **product detail modal** — are prices displayed correctly?
 - Check the **star ratings** — do they match the data?
 - Watch the **cart badge** — does it show the right count?
+
+---
+
+## 📌 Special Notes
+
+- **"Proceed to Checkout" button** — This button in the cart sidebar is non-functional. It does not navigate anywhere or trigger any action. This is a frontend-only debugging challenge, not a full e-commerce application, so checkout flow is intentionally omitted.
+- **Navigation links** — The header links (Home, Deals, New Arrivals, About) and footer links are placeholder `<a href="#">` tags. They do not navigate to separate pages. The entire app lives on a single `index.html` page.
+- **Product images** — All product images are served via Unsplash hotlinks. An active internet connection is required for images to load. If an image fails to load, you'll see a broken image icon — this is not a bug.
+- **No backend** — There is no server, database, or API. All data is hardcoded in `js/data.js`. Cart state exists only in-memory (localStorage persistence is one of the bugs to fix).
+- **Code style** — The JavaScript is intentionally dense, minified-looking, and uses cryptic variable names. This is by design to make the debugging challenge harder — it is not a bug.
 
 ---
 
