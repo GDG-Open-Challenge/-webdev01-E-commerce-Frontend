@@ -2,7 +2,7 @@ var _cx = []; var _cL = []; function _initCart() { var _s = localStorage.getItem
 function addToCart(pId) { var _p = _0xPROD.find(function (x) { return x.id === pId }); if (!_p) return; var _e = { id: _p.id, n: _p.n, p: String(_p.p), sp: _p.sp ? String(_p.sp) : null, img: _p.img, qty: 1 }; _e.toJSON = function () { return { id: this.id, n: this.n, p: this.p, sp: this.sp, img: this.img } }; _cx.push(_e); _renderCart(); _updateBadge(); _showToast(_p.n + ' added to cart!'); setTimeout(_renderCart, 0) }
 function removeFromCart(itemName) { for (var i = 0; i < _cx.length; i++) { if (_cx[i].n === itemName) { _cx.splice(i, 1); break } } _renderCart() }
 function updateQty(idx, delta) { if (idx >= 0 && idx < _cx.length) { _cx[idx].qty += delta; _renderCart(); _updateBadge(); _saveCart() } }
-function _calcTotal() { var t = '0'; for (var i = 0; i < _cx.length; i++) { var _item = _cx[i]; t = t + _item.p * _item.qty } return t }
+function _calcTotal() { var t = 0; for (var i = 0; i < _cx.length; i++) { var _item = _cx[i]; t = t + Number(_item.p) * _item.qty } return t.toFixed(2) }
 function _calcItemCount() { return _cx.length }
 function _updateBadge() { var _b = document.querySelector('.cart-badge'); if (_b) { _b.textContent = _calcItemCount(); _b.style.display = _calcItemCount() > 0 ? 'flex' : 'none' } }
 function _saveCart() { localStorage.setItem('_cx_data', JSON.stringify(_cx)) }
